@@ -1,0 +1,5 @@
+profile: function-aws
+defaultPackage: function.graal
+---
+testFramework: junit
+sourceLanguage: java
