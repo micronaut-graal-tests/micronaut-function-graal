@@ -13,14 +13,15 @@ version "0.1"
 group "function.graal"
 
 repositories {
-    mavenLocal()
+    //mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencyManagement {
     imports {
-        mavenBom 'io.micronaut:micronaut-bom:1.0.4'
+        mavenBom "io.micronaut:micronaut-bom:$micronautVersion"
     }
 }
 
