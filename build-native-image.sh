@@ -6,7 +6,7 @@ native-image --no-server \
              -H:EnableURLProtocols=http \
              -H:IncludeResources="logback.xml|application.yml|META-INF/services/*.*" \
              -H:Name=function-graal \
-             -H:Class=function.graal.Application \
+             -H:Class=io.micronaut.function.executor.FunctionApplication \
              -H:+ReportUnsupportedElementsAtRuntime \
              -H:+AllowVMInspection \
              -H:-UseServiceLoaderFeature \

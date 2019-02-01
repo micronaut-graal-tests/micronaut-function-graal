@@ -21,7 +21,7 @@ RUN native-image --no-server \
                  -H:-UseServiceLoaderFeature \
                  --allow-incomplete-classpath \
                  -H:Name=function-graal \
-                 -H:Class=function.graal.Application
+                 -H:Class=io.micronaut.function.executor.FunctionApplication
 
 
 FROM frolvlad/alpine-glibc
