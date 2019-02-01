@@ -13,12 +13,11 @@ RUN native-image --no-server \
                  --class-path /home/gradle/function-graal/build/libs/*-all.jar \
                  -H:ReflectionConfigurationFiles=/home/gradle/function-graal/reflect.json \
                  -H:EnableURLProtocols=http \
-                 -H:IncludeResources='logback.xml|application.yml|META-INF/services/*.*' \
+                 -H:IncludeResources='logback.xml|application.yml' \
                  -H:+ReportUnsupportedElementsAtRuntime \
                  -H:+AllowVMInspection \
                  --rerun-class-initialization-at-runtime='sun.security.jca.JCAUtil$CachedSecureRandomHolder',javax.net.ssl.SSLContext \
                  --delay-class-initialization-to-runtime=io.netty.handler.codec.http.HttpObjectEncoder,io.netty.handler.codec.http.websocketx.WebSocket00FrameEncoder,io.netty.handler.ssl.util.ThreadLocalInsecureRandom \
-                 -H:-UseServiceLoaderFeature \
                  --allow-incomplete-classpath \
                  -H:Name=function-graal \
                  -H:Class=io.micronaut.function.executor.FunctionApplication
