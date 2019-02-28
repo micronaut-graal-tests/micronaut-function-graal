@@ -1,3 +1,6 @@
 micronaut:
     function:
         name: function-graal
+jackson:
+    module-scan: false
+    bean-introspection-module: true

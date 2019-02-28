@@ -1,5 +1,8 @@
 package function.graal.pojo;
 
+import io.micronaut.core.annotation.Introspected;
+
+@Introspected
 public class GreetingResponse {
 
     private String msg;
