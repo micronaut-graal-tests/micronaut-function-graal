@@ -28,6 +28,7 @@ dependencyManagement {
 dependencies {
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"
+    annotationProcessor "io.micronaut:micronaut-graal"
 
     compile "io.micronaut:micronaut-function-aws"
     compile "io.micronaut:micronaut-inject"
