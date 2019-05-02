@@ -13,7 +13,7 @@ version "0.1"
 group "function.graal"
 
 repositories {
-    //mavenLocal()
+    mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
