@@ -22,17 +22,18 @@ configurations {
 }
 
 dependencies {
-    annotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
+    annotationProcessor enforcedPlatform("io.micronaut:micronaut-bom:$micronautVersion")
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"
     annotationProcessor "io.micronaut:micronaut-graal"
 
-    implementation platform("io.micronaut:micronaut-bom:$micronautVersion")
+    implementation enforcedPlatform("io.micronaut:micronaut-bom:$micronautVersion")
     implementation "io.micronaut:micronaut-inject"
     implementation "io.micronaut:micronaut-validation"
     implementation "io.micronaut:micronaut-runtime"
     implementation "io.micronaut:micronaut-function-aws"
 
+    compileOnly enforcedPlatform("io.micronaut:micronaut-bom:$micronautVersion")
     compileOnly "org.graalvm.nativeimage:svm"
 
     runtime "ch.qos.logback:logback-classic:1.2.3"
@@ -40,10 +41,10 @@ dependencies {
     runtimeOnly "com.amazonaws:aws-lambda-java-log4j2:1.0.0"
     runtimeOnly "org.apache.logging.log4j:log4j-slf4j-impl:2.9.1"
 
-    testAnnotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
+    testAnnotationProcessor enforcedPlatform("io.micronaut:micronaut-bom:$micronautVersion")
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
 
-    testImplementation platform("io.micronaut:micronaut-bom:$micronautVersion")
+    testImplementation enforcedPlatform("io.micronaut:micronaut-bom:$micronautVersion")
     testImplementation("org.spockframework:spock-core") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
