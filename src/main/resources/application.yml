@@ -1,5 +1,0 @@
-micronaut:
-    function:
-        name: function-graal
-jackson:
-    bean-introspection-module: true
